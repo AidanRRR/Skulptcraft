@@ -7,8 +7,8 @@ body {
   min-height: 100vh;
   min-width: 100%;
   grid-template-columns: 0.15fr 0.3fr 1fr 0.2fr;
-  grid-template-rows: 0.1fr 0.5fr 1fr 0.3fr;
-  grid-template-areas: ". . . ." ". logo nav ." ". main main ." ". footer footer .";
+  grid-template-rows: 0.05fr 0.5fr 0.1fr 1fr 0.3fr;
+  grid-template-areas: ". . . ." ". logo nav ." ". . . ." ". main main ." ". footer footer .";
   background: url("../assets/images/Skullptkraft_bg.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -33,20 +33,69 @@ body {
 .footer {
   grid-area: footer; }
 
+.article-single {
+  display: grid;
+  grid-template-columns: 1fr 0.1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "left . right"; }
+
+.article-img {
+  grid-area: left;
+  z-index: -1; }
+
+.article-border {
+  margin-left: -15px;
+  margin-right: 15px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  grid-area: left;
+  border: 10px solid #120300;
+  z-index: 10; }
+
+.article-title {
+  grid-area: left;
+  color: white;
+  z-index: 10;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 5px;
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  width: 250px;
+  height: 50px;
+  border: 10px solid white;
+  padding: 10px;
+  margin-top: -7.5%; }
+
+.article-text {
+  grid-area: right;
+  font-size: 1rem;
+  color: white;
+  font-family: "Open Sans", sans-serif; }
+
+.article-text-title {
+  font-size: 3rem;
+  color: white;
+  font-weight: 800;
+  font-family: "Open Sans", sans-serif; }
+
 .logo {
+  content: url("../assets/images/logo-cut.png");
   width: 100%;
-  min-width: 250px; }
+  min-width: 75px;
+  padding-right: 15px; }
 
 .nav-links {
   color: white;
   font-size: 1.2rem;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 300; }
 
 .nav-links * {
-  margin-left: 35px; }
+  margin-left: 0px; }
 
 .border {
   border: 10px solid #120300;
@@ -60,5 +109,26 @@ body {
 
 .slogan-power {
   font-family: "Open Sans", sans-serif;
+  font-weight: 800;
   color: white;
   font-size: 6rem; }
+
+.footer-text {
+  color: white;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif; }
+
+@media only screen and (min-width: 600px) {
+  .logo {
+    content: url("../assets/images/logo.png");
+    width: 100%;
+    min-width: 250px; }
+  .nav-links {
+    color: white;
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 300; }
+  .nav-links * {
+    margin-left: 35px; } }
