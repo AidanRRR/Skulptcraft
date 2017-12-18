@@ -50,6 +50,13 @@ body {
   grid-area: left;
   z-index: -1; }
 
+.article-maps {
+  width: 100%;
+  min-height: 350px;
+  margin-top: 75px;
+  grid-area: left;
+  z-index: 1; }
+
 .article-border {
   display: none;
   width: 100%;
@@ -76,11 +83,29 @@ body {
   padding: 10px;
   margin-top: -7.5%; }
 
-.article-text {
+.article-title-maps {
+  grid-area: left;
+  color: white;
+  z-index: 10;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 3px;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 150px;
+  height: 35px;
+  border: 8px solid white;
+  padding: 10px;
+  margin-top: -7.5%; }
+
+.article-text, .article-text-maps {
   grid-area: right;
   font-size: 0.8rem;
   color: white;
   font-family: "Open Sans", sans-serif; }
+
+.article-text-maps {
+  margin-top: 60px; }
 
 .article-text-title {
   margin-top: 15px;
@@ -98,15 +123,18 @@ body {
 .nav-links {
   color: white;
   font-size: 1.2rem;
-  letter-spacing: 3px;
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 300; }
+  font-family: "Open Sans"; }
 
 .nav-links * {
-  margin-left: 0px; }
+  margin-left: 0px;
+  text-decoration: none;
+  color: white;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 3px; }
 
 .border {
+  visibility: hidden;
   border: 10px solid #120300;
   margin-left: 4vw;
   margin-right: 5vw;
@@ -128,6 +156,8 @@ body {
   font-family: "Open Sans", sans-serif; }
 
 @media only screen and (min-width: 1060px) {
+  .border {
+    visibility: visible; }
   .logo {
     content: url("../assets/images/logo.png");
     width: 100%;
@@ -168,7 +198,7 @@ body {
     width: 250px;
     height: 50px;
     border: 10px solid white; }
-  .article-text {
+  .article-text, .article-text-maps {
     font-size: 1rem; }
   .article-text-title {
     font-size: 3rem;
