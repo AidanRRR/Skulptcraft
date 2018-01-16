@@ -12,13 +12,13 @@ body {
   grid-template-columns: 0.15fr 0.3fr 1fr 0.2fr;
   grid-template-rows: 100px 0.1fr 0.1fr 1fr 1fr;
   grid-template-areas:
-    ". . . ."
-    ". logo nav ."
-    ". . . ."
-    ". main main ."
-    ". footer footer .";
+    '. . . .'
+    '. logo nav .'
+    '. . . .'
+    '. main main .'
+    '. footer footer .';
 
-  background: url("../assets/images/Skullptkraft_bg.jpg") no-repeat center
+  background: url('../assets/images/Skullptkraft_bg.jpg') no-repeat center
     center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -57,16 +57,33 @@ body {
   grid-area: footer;
 }
 
+.services {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'services-left services-right';
+}
+
+.services-video {
+  width: 100%;
+  grid-area: services-left;
+}
+
 .article-single {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 0.2fr 0.5fr;
   grid-template-areas:
-    "left"
-    "right";
+    'left'
+    'right';
 }
 
 .article-img {
+  width: 100%;
+  grid-area: left;
+  z-index: -1;
+}
+
+.article-video {
   width: 100%;
   grid-area: left;
   z-index: -1;
@@ -98,7 +115,7 @@ body {
   z-index: 10;
 
   font-weight: bold;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   letter-spacing: 3px;
   font-size: 1.5rem;
 
@@ -117,7 +134,7 @@ body {
   z-index: 10;
 
   font-weight: bold;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   letter-spacing: 3px;
   font-size: 1.5rem;
 
@@ -134,7 +151,7 @@ body {
   grid-area: right;
   font-size: 0.8rem;
   color: white;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .article-text-maps {
@@ -142,17 +159,20 @@ body {
   margin-top: 60px;
 }
 
+.services {
+}
+
 .article-text-title {
   margin-top: 15px;
   font-size: 1.2rem;
   color: white;
   font-weight: 800;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 // Elements
 .logo {
-  content: url("../assets/images/logo-cut.png");
+  content: url('../assets/images/logo-cut.png');
   width: 100%;
   min-width: 75px;
   padding-right: 15px;
@@ -161,7 +181,7 @@ body {
 .nav-links {
   color: white;
   font-size: 1.2rem;
-  font-family: "Open Sans";
+  font-family: 'Open Sans';
 }
 
 .nav-links * {
@@ -186,16 +206,19 @@ body {
 }
 
 .slogan-power {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 800;
   color: white;
   font-size: 2.5rem;
 }
 
+.video {
+}
+
 .footer-text {
   color: white;
   font-weight: bold;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 @media only screen and (min-width: 1060px) {
@@ -204,7 +227,7 @@ body {
   }
 
   .logo {
-    content: url("../assets/images/logo.png");
+    content: url('../assets/images/logo.png');
     width: 100%;
     min-width: 250px;
   }
@@ -213,7 +236,7 @@ body {
     color: white;
     font-size: 1.2rem;
     letter-spacing: 5px;
-    font-family: "Open Sans";
+    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 300;
   }
@@ -226,15 +249,15 @@ body {
     grid-template-columns: 0.15fr 0.3fr 1fr 0.2fr;
     grid-template-rows: 0.05fr 0.5fr 0.1fr 1fr 0.3fr;
     grid-template-areas:
-      ". . . ."
-      ". logo nav ."
-      ". . . ."
-      ". main main ."
-      ". footer footer .";
+      '. . . .'
+      '. logo nav .'
+      '. . . .'
+      '. main main .'
+      '. footer footer .';
   }
 
   .slogan-power {
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 800;
     color: white;
     font-size: 6rem;
@@ -255,7 +278,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 0.1fr 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas: "left . right";
+    grid-template-areas: 'left . right';
   }
 
   .article-title {
@@ -273,6 +296,6 @@ body {
   .article-text-title {
     font-size: 3rem;
     font-weight: 800;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
   }
 }
