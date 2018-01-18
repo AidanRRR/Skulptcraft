@@ -48,6 +48,11 @@ body {
   width: 100%;
   grid-area: services-left; }
 
+.services-right {
+  display: flex;
+  width: 100%;
+  grid-area: services-right; }
+
 .article-single {
   display: grid;
   grid-template-columns: 1fr;
@@ -82,7 +87,7 @@ body {
   border: 10px solid #120300;
   z-index: 10; }
 
-.article-title {
+.article-title, .article-title-services, .services-title, .article-title-maps {
   grid-area: left;
   color: white;
   z-index: 10;
@@ -97,26 +102,22 @@ body {
   padding: 10px;
   margin-top: -7.5%; }
 
-.article-title-maps {
+.article-title-services {
   grid-area: left;
-  color: white;
-  z-index: 10;
-  font-weight: bold;
-  font-family: 'Open Sans', sans-serif;
-  letter-spacing: 3px;
-  font-size: 1.5rem;
-  text-align: center;
-  width: 150px;
-  height: 35px;
-  border: 8px solid white;
-  padding: 10px;
-  margin-top: -7.5%; }
+  margin-top: -5%; }
 
-.article-text, .article-text-maps {
+.services-title {
+  grid-area: services-left;
+  margin-bottom: 25px; }
+
+.article-text, .article-text-left, .article-text-maps {
   grid-area: right;
   font-size: 0.8rem;
   color: white;
   font-family: 'Open Sans', sans-serif; }
+
+.article-text-left {
+  grid-area: left; }
 
 .article-text-maps {
   margin-top: 60px; }
@@ -169,6 +170,22 @@ body {
   font-weight: bold;
   font-family: 'Open Sans', sans-serif; }
 
+.y-container {
+  grid-area: right;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; }
+
+.y-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
 @media only screen and (min-width: 1060px) {
   .border {
     visibility: visible; }
@@ -206,13 +223,25 @@ body {
     grid-template-columns: 1fr 0.1fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: 'left . right'; }
-  .article-title {
+  .article-title, .article-title-services, .services-title, .article-title-maps {
     letter-spacing: 5px;
     font-size: 2rem;
     width: 250px;
     height: 50px;
     border: 10px solid white; }
-  .article-text, .article-text-maps {
+  .article-title-maps {
+    letter-spacing: 5px;
+    font-size: 2rem;
+    width: 250px;
+    height: 50px;
+    border: 10px solid white; }
+  .services-title {
+    letter-spacing: 5px;
+    font-size: 2rem;
+    width: 250px;
+    height: 50px;
+    border: 10px solid white; }
+  .article-text, .article-text-left, .article-text-maps {
     font-size: 1rem; }
   .article-text-title {
     font-size: 3rem;
