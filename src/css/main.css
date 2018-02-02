@@ -10,6 +10,20 @@
 .main {
   grid-area: main; }
 
+.main-title {
+  color: white;
+  z-index: 10;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 3px;
+  font-size: 1.3rem;
+  text-align: center;
+  width: 150px;
+  height: 35px;
+  border: 8px solid white;
+  padding: 10px;
+  margin-top: -5%; }
+
 @media only screen and (min-width: 1060px) {
   .border {
     visibility: visible; }
@@ -17,4 +31,10 @@
     font-family: 'Open Sans', sans-serif;
     font-weight: 800;
     color: white;
-    font-size: 6rem; } }
+    font-size: 6rem; }
+  .main-title {
+    letter-spacing: 5px;
+    font-size: 2rem;
+    width: 250px;
+    height: 50px;
+    border: 10px solid white; } }

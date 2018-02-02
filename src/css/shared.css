@@ -1,54 +1,41 @@
 * {
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
 body {
   display: grid;
   min-height: 100vh;
   min-width: 100%;
   grid-template-columns: 0.15fr 0.3fr 1fr 0.2fr;
-  grid-template-rows: 100px 0.1fr 0.1fr 1fr 0.2fr 1fr;
-  grid-template-areas:
-    '. . . .'
-    '. logo nav .'
-    '. . . .'
-    '. main main .'
-    '. . . .'
-    '. footer footer .';
-  background: url('../assets/images/Skullptkraft_bg.jpg') no-repeat center
-    center fixed;
+  grid-template-rows: 100px 0.1fr 0.1fr 1fr 1fr;
+  grid-template-areas: '. . . .' '. logo nav .' '. . . .' '. main main .' '. footer footer .';
+  background: url("../assets/images/Skullptkraft_bg.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-}
+  background-size: cover; }
 
 a:link {
-  color: white;
-}
+  color: white; }
 
 a:visited {
-  color: white;
-}
+  color: white; }
 
 .logo-container {
   grid-area: logo;
   display: flex;
   align-items: center;
-  justify-content: center;
-}
+  justify-content: center; }
 
 .footer {
-  grid-area: footer;
-}
+  grid-area: footer; }
 
 .logo {
-  content: url('../assets/images/logo-cut.png');
+  content: url("../assets/images/logo-cut.png");
   width: 100%;
+  margin-bottom: 25px;
   min-width: 75px;
-  padding-right: 15px;
-}
+  padding-right: 15px; }
 
 .border {
   visibility: hidden;
@@ -59,39 +46,27 @@ a:visited {
   width: 90vw;
   height: 85vh;
   position: absolute;
-  z-index: -10;
-}
+  z-index: -10; }
 
 .footer-text {
   color: white;
   font-weight: bold;
-  font-family: 'Open Sans', sans-serif;
-}
+  font-family: 'Open Sans', sans-serif; }
 
 .footer-text-by {
   margin-right: 0;
   color: white;
   font-family: 'Open Sans', sans-serif;
-  text-align: right;
-}
+  text-align: right; }
 
 @media only screen and (min-width: 1060px) {
   .border {
-    visibility: visible;
-  }
+    visibility: visible; }
   .logo {
-    content: url('../assets/images/logo.png');
+    content: url("../assets/images/logo.png");
     width: 100%;
-    min-width: 250px;
-  }
+    min-width: 250px; }
   body {
     grid-template-columns: 0.15fr 0.3fr 1fr 0.2fr;
     grid-template-rows: 0.05fr 0.5fr 0.1fr 1fr 0.3fr;
-    grid-template-areas:
-      '. . . .'
-      '. logo nav .'
-      '. . . .'
-      '. main main .'
-      '. footer footer .';
-  }
-}
+    grid-template-areas: '. . . .' '. logo nav .' '. . . .' '. main main .' '. footer footer .'; } }
