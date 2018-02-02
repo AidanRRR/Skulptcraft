@@ -8,10 +8,35 @@ $border-color: #120300;
     'boxes-1'
     'boxes-2'
     'boxes-3';
+  text-align: center;
+  height: 85%;
+}
+
+.box {
+  color: white;
+}
+
+.box-1 {
+  @extend .box;
+  grid-area: boxes-1;
+}
+.box-2 {
+  @extend .box;
+  grid-area: boxes-2;
+}
+.box-3 {
+  @extend .box;
+  grid-area: boxes-3;
+}
+
+img {
+  width: 80%;
 }
 
 @media only screen and (min-width: 1060px) {
   .creation-boxes {
+    margin-top: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 'boxes-1 boxes-2 boxes-3';
   }
 }
